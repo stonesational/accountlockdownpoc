@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="isActive" type="Boolean" default="true" />
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.handleShowCustomModal}" />
+    <lightning:workspaceAPI aura:id="workspace" />
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <!--lightning:button iconName="utility:flow" label="Lock Down" onclick="{!c.handleShowCustomModal}"/-->
+    
+</aura:component>	
