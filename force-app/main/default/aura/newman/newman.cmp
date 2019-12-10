@@ -1,3 +1,4 @@
 <aura:component access="global" implements="flexipage:availableForAllPageTypes">
     <img src="https://i.imgur.com/yz53s4N.gif"/>
+    
 </aura:component>	
