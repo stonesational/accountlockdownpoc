@@ -5,7 +5,7 @@
 ## Resources
 
 ## Description of Files and Directories
-Toggle Authentication flag: 
+### Toggle Authentication flag: 
 
 Locate /force-app/main/default/aura/lockdown/lockdown.cmp
 
