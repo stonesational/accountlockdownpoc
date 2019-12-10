@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
+    <aura:attribute name="customerId" type="String"/>
+    <aura:attribute name="fields" type="String[]" default="['Name','OwnerId']" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+
+    <aura:if isTrue="{!v.customerId}">
+        <div class="slds-card">
+            <div class="slds-float_right">
+            <lightning:buttonMenu aura:id="menu" onselect="{! c.handleSelect }" alternativeText="Show menu">
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+                <lightning:menuItem value="MenuItemThree" label="Menu Item Three" disabled="true" />
+                <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+                </lightning:buttonMenu>
+            </div>
+            <lightning:recordForm
+                recordId="{!v.customerId}"
+                objectApiName="Account"
+                mode="readonly" 
+                fields="{!v.fields}"
+                columns="2"
+                />
+        </div>
+    </aura:if>
+
+    <c:AuthenticationFlow/>
+</aura:component>	

@@ -1,0 +1,5 @@
+<aura:component>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:flow aura:id="flowData" class="slds-card"/>    
+        
+</aura:component>	

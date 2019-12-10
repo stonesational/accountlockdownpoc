@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <choices>
+        <name>asdf</name>
+        <choiceText>asdfasd</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>asdfasd</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>AuthMethod</name>
+        <choiceText>In Wallet</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue/>
+        </value>
+    </choices>
+    <choices>
+        <name>questions</name>
+        <choiceText>Questions</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <elementReference>asdf</elementReference>
+        </value>
+    </choices>
+    <constants>
+        <name>asdfads</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>asdfasd</stringValue>
+        </value>
+    </constants>
+    <interviewLabel>Authentication Test {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Customer Authentication</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Start_Authentication</name>
+        <label>Customer Authentication</label>
+        <locationX>161</locationX>
+        <locationY>49</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Authentication_Options</name>
+            <choiceReferences>AuthMethod</choiceReferences>
+            <choiceReferences>questions</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Options</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Start_Authentication</startElementReference>
+    <status>Draft</status>
+</Flow>
